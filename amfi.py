@@ -2,7 +2,6 @@ import requests
 import json
 import boto3
 import time
-from IPython.display import JSON
 import pandas as pd 
 import os
 
@@ -96,3 +95,9 @@ def convert_to_csv():
         if not df.empty:
             name = file.replace('.txt', '.csv')
             df.to_csv("amficsv/"+name)
+
+
+# url = "https://www.amfiindia.com/spages/NAVAll.txt"
+# amfi = Amfi()
+# data = amfi.get_txt().get_nav_history()
+# data = amfi.get_txt().get_nav_daily()
